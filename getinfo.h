@@ -1,6 +1,9 @@
 // Returns the name of the operating system, e.g. "Microsoft Windows 8.1 Enterprise"
 const char* getOSName();
 
+// Returns the hostname of the system
+const char* getHostname();
+
 // Returns the version of the operating system, e.g. "6.3.9600"
 const char* getOSVersion();
 
@@ -25,19 +28,16 @@ const int getCPUSpeed(const int cpuID);
 const int getCPULoad(const int cpuID, const int core);
 
 // Returns the total amount of physical memory in bytes
-const int getTotalRAM();
+const long int getTotalRAM();
 
 // Returns the available amount of physical memory in bytes
-const int getFreeRAM();
+const long int getFreeRAM();
 
-// Returns the name of a GPU
-const char* getGPUName(const int gpuID);
+// Returns the names of all GPUs
+const char** getGPUNames();
 
 // Returns the number of installed GPUs
 const int getGPUCount();
-
-// Returns the hostname of the system
-const char* getHostname();
 
 // Returns the architecture of the system
 const char* getArchitecture();
